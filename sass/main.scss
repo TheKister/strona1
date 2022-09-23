@@ -1,0 +1,394 @@
+@import 'colors';
+@import 'animation';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	background-color: $bg-color;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+}
+
+.blue-text {
+	color: $main-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 1;
+
+	a,
+	i {
+		color: $white;
+	}
+
+	a:hover {
+		color: $main-color;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.active {
+		color: $main-color;
+	}
+}
+
+header {
+	color: $white;
+
+	h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		width: 100%;
+
+		background-image: url(../img/playstation_mobile.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+
+	.hero-text {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		z-index: 5;
+		padding: 10px;
+		text-align: center;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.828);
+		z-index: -5;
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+}
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	// .aboutus-hover {
+	// 	transition: color 0.3s;
+	// }
+
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+
+.aboutus-hero {
+	position: relative;
+	width: 100%;
+
+	background-image: url(../img/about_mobile.jpg);
+	background-position: center;
+	background-size: cover;
+	color: $light-gray;
+	z-index: 0;
+
+	.aboutus-hero-shadow {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		top: 0;
+		z-index: -2;
+	}
+
+	.aboutus-hero-item {
+		margin: 10px 0;
+
+		i {
+			font-size: 36px;
+		}
+
+		.aboutus-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+
+.portfolio {
+	.carousel-item {
+		position: relative;
+		height: 600px;
+	}
+
+	.carousel-caption {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		right: 0;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+
+.prices {
+	font-size: 16px;
+	p {
+		text-align: center;
+	}
+	.price-box {
+		padding: 30px;
+		margin: 20px 10px;
+		background-color: $white;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.405);
+		transition: 0.3s;
+
+		h3 {
+			color: $main-color;
+			text-transform: uppercase;
+		}
+
+		span {
+			font-weight: bold;
+		}
+
+		i {
+			padding: 0 5px;
+			font-size: 24px;
+		}
+
+		button {
+			padding: 10px 20px;
+		}
+
+		p:last-of-type {
+			font-size: 30px;
+			font-weight: bold;
+		}
+	}
+	.price-box:hover {
+		transform: scale(1.05);
+	}
+	.price-info {
+		margin-top: 30px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.team {
+	position: relative;
+	background-image: url('../img/conference_room.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: 0;
+
+	h2 {
+		color: $light-gray;
+	}
+
+	.team-shadow {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(80, 42, 0, 0.5);
+		z-index: -1;
+	}
+	.card {
+		transition: transform 0.3s;
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+
+		i {
+			padding: 10px;
+		}
+	}
+
+	.card:hover {
+		transform: scale(0.95);
+	}
+
+	.card-title {
+		margin-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.card-body {
+		height: 160px;
+	}
+}
+
+.achievements {
+	.achievement-item {
+		i {
+			padding: 10px;
+			font-size: 48px;
+			color: white;
+			text-shadow: 0 0 5px #000;
+		}
+		.achievement-text {
+			text-transform: uppercase;
+		}
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url('/img/skyline-1869214_1920.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: 0;
+
+	.contact-shadow {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -5;
+		top: 0;
+	}
+
+	h2 {
+		font-weight: bold;
+		color: $white;
+	}
+
+	.contact-us {
+		display: flex;
+		align-items: center;
+		color: $white;
+
+		.contact-item {
+			h3 {
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+
+			.fa-brands {
+				font-size: 26px;
+				padding: 10px;
+				color: $white;
+			}
+			.fa-brands:hover {
+				color: $light-gray;
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.aboutus-hero {
+		background-image: url(../img/about_PC.jpg);
+	}
+	.prices {
+		.price-info {
+			font-size: 18px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url(../img/playstation_PC.jpg);
+		}
+	}
+	main {
+		.aboutus-hero {
+			background-image: url(../img/about_PC.jpg);
+		}
+	}
+}
